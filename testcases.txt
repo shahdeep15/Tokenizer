@@ -1,0 +1,238 @@
+Deep Shah
+Shashank Seeram
+Tokenizer TestCases 
+
+1. 
+Input:"Hello" "world"
+Output: Please enter a string to be tokenized
+
+
+2.
+Input:
+Output: Please enter a string to be tokenized
+
+
+3.
+Input:"Hello world 123 [] () > >= ? ! Deep / Shah \"
+Output:
+word "Hello"
+word "world"
+decimal constant "123"
+left brace "["
+right brace "]"
+left parenthesis "("
+right parenthesis ")"
+greater than sign ">"
+greater or equal to ">="
+condition "?"
+negate "!"
+word "Deep"
+backslash "/"
+word "Shah"
+forward slash "\"
+
+
+4. 
+Input: “10 divides / 5 into 2 equal parts , right ?”
+Output:
+decimal constant "10"
+word "divides"
+backslash "/"
+decimal constant "5"
+word "into"
+decimal constant "2"
+word "equal"
+word "parts"
+comma ","
+word "right"
+condition "?"
+
+
+5.
+Input: "Wow, still ... can(not) believe    we finished [the] assginment./tokenizer Deep[!]"
+Output:
+word "Wow"
+comma ","
+word "still"
+structure member "."
+structure member "."
+structure member "."
+word "can"
+left parenthesis "("
+word "not"
+right parenthesis ")"
+word "believe"
+word "we"
+word "finished"
+left brace "["
+word "the"
+right brace "]"
+word "assginment"
+structure member "."
+backslash "/"
+word "tokenizer"
+word "Deep"
+left brace "["
+negate "!"
+
+
+6. 
+Input:"I think to myself, if we had more time for the pa1, we could have done, the, (extra credit)?"
+Output:
+word "I"
+word "think"
+word "to"
+word "myself"
+comma ","
+C Keyword "if"
+word "we"
+word "had"
+word "more"
+word "time"
+C Keyword "for"
+word "the"
+word "pa1"
+comma ","
+word "we"
+word "could"
+word "have"
+word "done"
+comma ","
+word "the"
+comma ","
+left parenthesis "("
+word "extra"
+word "credit"
+right parenthesis ")"
+condition "?"
+
+7.
+Input:"this is a [short] test (case)"
+Output:
+word "this"
+word "is"
+word "a"
+left brace "["
+word "short"
+right brace "]"
+word "test"
+left parenthesis "("
+word "case"
+right parenthesis ")"
+
+8.
+Input:"thinking about 3.14 i want pi | + pizza. Pizza >= pie"
+Output:
+word "thinking"
+word "about"
+float "3.14"
+word "i"
+word "want"
+word "pi"
+bitwise or "|"
+plus "+"
+word "pizza"
+structure member "."
+word "Pizza"
+greater or equal to ">="
+word "pie"
+
+
+9. 
+Input:"Deep . / \ [] () ? ! < > <= => >="
+Output:
+word "Deep"
+structure member "."
+backslash "/"
+forward slash "\"
+left brace "["
+right brace "]"
+left parenthesis "("
+right parenthesis ")"
+condition "?"
+negate "!"
+less than sign "<"
+greater than sign ">"
+less than or equal to "<="
+equals sign "="
+greater than sign ">"
+greater or equal to ">="
+
+
+10.
+Input:"If, I, had, more time (234, 1.243), I [could] have done > test,case."
+Output:
+word "If"
+comma ","
+word "I"
+comma ","
+word "had"
+comma ","
+word "more"
+word "time"
+left parenthesis "("
+decimal constant "234"
+comma ","
+float "1.243"
+right parenthesis ")"
+comma ","
+word "I"
+left brace "["
+word "could"
+right brace "]"
+word "have"
+word "done"
+greater than sign ">"
+word "test"
+comma ","
+word "case"
+structure member "."
+
+
+11. 
+Input: "Let's do some hex/oct tests [0x24152] (0422341)"
+Output:
+word "Let"
+word "s"
+word "do"
+word "some"
+word "hex"
+backslash "/"
+word "oct"
+word "tests"
+left brace "["
+hex constant "0x24152"
+right brace "]"
+left parenthesis "("
+octal constant "0422341"
+right parenthesis ")"
+
+
+12. 
+Input:"are, we, going <to> (get) >=  [0x100] on the assignment? 0111 I think [YES]"
+Output:
+word "are"
+comma ","
+word "we"
+comma ","
+word "going"
+less than sign "<"
+word "to"
+greater than sign ">"
+left parenthesis "("
+word "get"
+right parenthesis ")"
+greater or equal to ">="
+left brace "["
+hex constant "0x100"
+right brace "]"
+word "on"
+word "the"
+word "assignment"
+condition "?"
+octal constant "0111"
+word "I"
+word "think"
+left brace "["
+word "YES"
+right brace "]"
